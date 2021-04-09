@@ -2,37 +2,39 @@
 # CentOS-Base.repo
 #
 # Since official repositories are gone, use vault.centos.org instead.
+# Since vault.centos.org forces https over tlsv3 which centos 511 doesn't support
+# use a pure http mirror that does not (yet) force https
 #
 #
 
 [base]
 name=CentOS-5 - Base
-baseurl=http://vault.centos.org/5.11/os/$basearch/
+baseurl=http://linuxsoft.cern.ch/centos-vault/5.11/os/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
 
 [updates]
 name=CentOS-5 - Updates
-baseurl=http://vault.centos.org/5.11/updates/$basearch/
+baseurl=http://linuxsoft.cern.ch/centos-vault/5.11/updates/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
 
 [extras]
 name=CentOS-5 - Extras
-baseurl=http://vault.centos.org/5.11/extras/$basearch/
+baseurl=http://linuxsoft.cern.ch/centos-vault/5.11/extras/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
 
 [centosplus]
 name=CentOS-5 - Plus
-baseurl=http://vault.centos.org/5.11/centosplus/$basearch/
+baseurl=http://linuxsoft.cern.ch/centos-vault/5.11/centosplus/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
 
 [contrib]
 name=CentOS-5 - Contrib
-baseurl=http://vault.centos.org/5.11/contrib/$basearch/
+baseurl=http://linuxsoft.cern.ch/centos-vault/5.11/contrib/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
